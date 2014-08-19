@@ -1,3 +1,5 @@
+import model.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -52,14 +54,4 @@ public class BinaryTreeInorderTraversal {
         return result;
     }
 
-}
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
 }
