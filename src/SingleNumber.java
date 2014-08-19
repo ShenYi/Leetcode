@@ -18,8 +18,8 @@ public class SingleNumber {
         }
 
         int start = 0;
-        for (int i = 0; i < A.length; i++) {
-            start ^= A[i];
+        for (int aA : A) {
+            start ^= aA;
         }
 
         return start;

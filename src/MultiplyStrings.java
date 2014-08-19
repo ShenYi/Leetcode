@@ -14,7 +14,7 @@ public class MultiplyStrings {
 
     }
 
-    private StringBuilder sb = new StringBuilder();
+    private final StringBuilder sb = new StringBuilder();
 
     public String multiply(String num1, String num2) {
         if (num1 == null || num2 == null) {

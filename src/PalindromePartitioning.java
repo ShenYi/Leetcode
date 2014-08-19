@@ -27,9 +27,10 @@ public class PalindromePartitioning {
                                 + "ehcwbzedsmrxtjsipkyxk"));
         System.out.println(instance.result.size());
         t = System.currentTimeMillis() - t;
-        // System.out.println(t);
+        System.out.println(t);
     }
 
+    @SuppressWarnings("unused")
     public List<List<String>> partition1(String s) {
         result = new ArrayList<List<String>>();
         dfs(s, new ArrayList<String>());
@@ -38,8 +39,8 @@ public class PalindromePartitioning {
 
     public void dfs(String s, List<String> temp) {
         if (s.length() == 0) {
-            result.add(new ArrayList<>(temp));
-        }
+            result.add(new ArrayList<String>(temp));
+       }
         for (int i = 0; i < s.length(); i++) {
             final String sub = s.substring(0, i + 1);
 
@@ -59,8 +60,8 @@ public class PalindromePartitioning {
 
         result = new ArrayList<List<String>>();
 
-        List<String> firstElement = new ArrayList<>();
-        firstElement.add(Character.toString(s.charAt(0)));
+        List<String> firstElement = new ArrayList<String>();
+      firstElement.add(Character.toString(s.charAt(0)));
         result.add(firstElement);
 
         for (int i = 1; i < s.length(); i++) {
@@ -80,10 +81,8 @@ public class PalindromePartitioning {
 
     public List<List<String>> constructNext(List<List<String>> prev, String c) {
         List<List<String>> result = new ArrayList<List<String>>();
-        Iterator<List<String>> it = prev.iterator();
-        while (it.hasNext()) {
-            List<String> current = it.next();
-            List<String> temp1 = new ArrayList<String>();
+        for (List<String> current : prev) {
+        List<String> temp1 = new ArrayList<String>();
             List<String> temp2 = new ArrayList<String>();
 
             if (isPalindrome(current.get(current.size() - 1))) {

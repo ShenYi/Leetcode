@@ -103,6 +103,7 @@ public class SortList {
         return head.next;
     }
 
+    @SuppressWarnings("unused")
     public static ListNode con(int[] a) {
         ListNode next = null;
         for (int i = a.length - 1; i >= 0; i--) {
@@ -122,6 +123,7 @@ public class SortList {
         System.out.println();
     }
 
+    @SuppressWarnings("unused")
     public ListNode sortList(ListNode head) {
         if (head == null || head.next == null) {
             return head;
@@ -135,12 +137,11 @@ public class SortList {
             return start;
         }
 
-        ListNode key = start;
-        ListNode leftPart = key;
+        ListNode leftPart = start;
 
-        ListNode p = key;
+        ListNode p = start;
         while (p.next != null) {
-            if (p.next.val < key.val) {
+            if (p.next.val < start.val) {
                 // move to left
                 ListNode current = p.next;
                 p.next = p.next.next;
@@ -151,10 +152,9 @@ public class SortList {
             }
         }
 
-        ListNode newHead = sort(leftPart, key);
-        ListNode rightPart = sort(key.next, end);
+        ListNode newHead = sort(leftPart, start);
+        start.next = sort(start.next, end);
 
-        key.next = rightPart;
         return newHead;
     }
 

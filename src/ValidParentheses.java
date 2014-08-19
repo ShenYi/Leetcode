@@ -50,9 +50,6 @@ public class ValidParentheses {
             }
         }
 
-        if (stack.isEmpty()) {
-            return true;
-        }
-        return false;
+        return stack.isEmpty();
     }
 }

@@ -8,7 +8,7 @@ public class PalindromePartitioningII {
 
         System.out.println(instance.minCut("ccaacabacb"));
         t = System.currentTimeMillis() - t;
-        // System.out.println(t);
+        System.out.println(t);
     }
 
     public int minCut(String s) {
@@ -21,7 +21,7 @@ public class PalindromePartitioningII {
             List<Integer> adj = new ArrayList<Integer>();
 
             for (int j = i; j < strLen; j++) {
-                boolean b = false;
+                boolean b;
                 if (i == j) {
                     b = true;
                 } else if (i + 1 == j) {

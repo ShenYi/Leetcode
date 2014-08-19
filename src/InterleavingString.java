@@ -11,19 +11,9 @@ public class InterleavingString {
 
     public boolean isInterleave(String s1, String s2, String s3) {
         if (s1 == null || s1.length() == 0) {
-            if (s2 == null && s3 == null) {
-                return true;
-            } else if (s2.equals(s3)) {
-                return true;
-            } else {
-                return false;
-            }
+            return s2 == null && s3 == null || s2.equals(s3);
         } else if (s2 == null || s2.length() == 0) {
-            if (s1.equals(s3)) {
-                return true;
-            } else {
-                return false;
-            }
+            return s1.equals(s3);
         } else if (s3 == null || s3.length() == 0) {
             return false;
         } else if ((s1.length() + s2.length()) == s3.length()) {

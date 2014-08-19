@@ -17,7 +17,7 @@ public class SpiralMatrix {
         System.out.println(instance.result);
     }
 
-    private List<Integer> result = new ArrayList<Integer>();
+    private final List<Integer> result = new ArrayList<Integer>();
 
     public List<Integer> spiralOrder(int[][] matrix) {
         if (matrix.length == 0 || matrix[0].length == 0) {

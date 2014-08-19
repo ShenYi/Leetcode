@@ -11,7 +11,7 @@ public class WordLadder {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
         HashSet<String> a = new HashSet<String>();
-        a.addAll(Arrays.asList(new String[] {"hot", "dot", "dog", "lot", "log"}));
+        a.addAll(Arrays.asList("hot", "dot", "dog", "lot", "log"));
         System.out.println(ladderLength2("hit", "cog", a));
     }
 
@@ -60,6 +60,7 @@ public class WordLadder {
         return 0;
     }
 
+    @SuppressWarnings("unused")
     public static int ladderLength(String start, String end,
             HashSet<String> dict) {
         // return when not valid input
@@ -76,7 +77,7 @@ public class WordLadder {
             return 0;
         }
 
-        String[] dd = (String[]) dict.toArray(new String[dict.size()]);
+        String[] dd = dict.toArray(new String[dict.size()]);
         int[] dist = new int[dd.length];
         // mark all valid elements
         for (int i = 0; i < dist.length; i++) {

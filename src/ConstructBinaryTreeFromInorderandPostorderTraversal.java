@@ -1,5 +1,7 @@
 import java.util.Arrays;
 
+import model.TreeNode;
+
 /**
  * https://oj.leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/
  * 
@@ -55,15 +57,5 @@ public class ConstructBinaryTreeFromInorderandPostorderTraversal {
         System.out.print(node.val + "  ");
         pre(node.left);
         pre(node.right);
-    }
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
     }
 }

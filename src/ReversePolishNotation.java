@@ -22,8 +22,7 @@ public class ReversePolishNotation {
             return 0;
         }
         Stack<Integer> operands = new Stack<Integer>();
-        for (int i = 0; i < tokens.length; i++) {
-            String s = tokens[i];
+        for (String s : tokens) {
             if ("+".equals(s)) {
                 if (operands.size() < 2) {
                     return 0;

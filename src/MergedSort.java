@@ -11,13 +11,11 @@ public class MergedSort {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
         int[] a = new int[1];
-        int[] b = {1};
 
-        merge(a, 0, b, 1);
         System.out.println(Arrays.toString(a));
-
     }
 
+    @SuppressWarnings("unused")
     public static void merge(int A[], int m, int B[], int n) {
         if (A == null || B == null || m < 0 || n < 0 || A.length < m + n) {
             return;
