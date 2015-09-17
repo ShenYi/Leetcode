@@ -5,6 +5,15 @@ package com.yishen;
  */
 public class Test {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+            new Test().test1();
+
+    }
+
+    public void test1() throws RuntimeException{
+        int a=  1;
+        if (a!=1) {
+            throw new RuntimeException();
+        }
+
     }
 }
